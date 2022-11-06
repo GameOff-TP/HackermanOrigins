@@ -1,4 +1,4 @@
-extends Node
+extends Control
 
 export var progress_speed = 50
 export(Color) var done_color
