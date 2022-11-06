@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Popup.gd" type="Script" id=1]
+[ext_resource path="res://scenes/HackButtonPuzzle.tscn" type="PackedScene" id=2]
+
+[node name="Popup" type="Node"]
+script = ExtResource( 1 )
+puzzle_scene = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_left = 0.422
+anchor_top = 0.361
+anchor_right = 0.578
+anchor_bottom = 0.639
+margin_left = -0.240051
+margin_top = 0.119965
+margin_right = 0.23999
+margin_bottom = -0.120056
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -150.0
+margin_right = 150.0
+margin_bottom = 48.0
+color = Color( 0.65098, 0.215686, 0.215686, 1 )
+
+[node name="Label" type="Label" parent="Background/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Bonjour je suis un popup"
+align = 1
+valign = 1
+
+[node name="Container" type="Control" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
