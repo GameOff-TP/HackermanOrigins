@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/hack_button.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+done_color = Color( 0.188235, 0.866667, 0, 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 227.0
+margin_top = 76.0
+margin_right = 399.0
+margin_bottom = 150.0
+text = "HACK"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 51.0
+margin_top = 107.0
+margin_right = 205.0
+margin_bottom = 121.0
+
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
